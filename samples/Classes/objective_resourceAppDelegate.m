@@ -7,7 +7,7 @@
 //
 
 #import "objective_resourceAppDelegate.h"
-#import "ObjectiveResource.h"
+#import "ObjectiveResource/ObjectiveResource.h"
 
 @implementation objective_resourceAppDelegate
 
@@ -20,7 +20,7 @@
 	
 	// dogs is password protected
 	[ObjectiveResourceConfig setUser:@"Hiro"];
-  [ObjectiveResourceConfig setPassword:@"Protagonist"];
+	[ObjectiveResourceConfig setPassword:@"Protagonist"];
 	// use json
 	//[ObjectiveResourceConfig setResponseType:JSONResponse];
 	

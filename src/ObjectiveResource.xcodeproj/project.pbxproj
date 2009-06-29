@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43E6E4B00FF8E911004FD52D /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A00FF8E911004FD52D /* Connection.h */; };
+		43E6E4B10FF8E911004FD52D /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A10FF8E911004FD52D /* Connection.m */; };
+		43E6E4B20FF8E911004FD52D /* ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */; };
+		43E6E4B30FF8E911004FD52D /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */; };
+		43E6E4B40FF8E911004FD52D /* ConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A40FF8E911004FD52D /* ConnectionManager.h */; };
+		43E6E4B50FF8E911004FD52D /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A50FF8E911004FD52D /* ConnectionManager.m */; };
+		43E6E4B60FF8E911004FD52D /* NSHTTPURLResponse+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */; };
+		43E6E4B70FF8E911004FD52D /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */; };
+		43E6E4B80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */; };
+		43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */; };
+		43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */; };
+		43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */; };
+		43E6E4BC0FF8E911004FD52D /* ObjectiveResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */; };
+		43E6E4BD0FF8E911004FD52D /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */; };
+		43E6E4BE0FF8E911004FD52D /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AE0FF8E911004FD52D /* Response.h */; };
+		43E6E4BF0FF8E911004FD52D /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AF0FF8E911004FD52D /* Response.m */; };
+		43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */; };
+		43E6E5000FF8EA85004FD52D /* NSError+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */; };
+		43E6E5010FF8EA85004FD52D /* NSError+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */; };
+		43E6E5EE0FF8EDE9004FD52D /* libObjectiveSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E6E4CE0FF8E973004FD52D /* libObjectiveSupport.a */; };
+		AA747D9F0F9514B9006C5449 /* ObjectiveResource_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43E6E4CD0FF8E973004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libObjectiveSupport.a */;
+			remoteInfo = ObjectiveSupport;
+		};
+		43E6E4CF0FF8E98A004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveSupport */;
+			remoteInfo = ObjectiveSupport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43E6E4A00FF8E911004FD52D /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Classes/Connection.h; sourceTree = "<group>"; };
+		43E6E4A10FF8E911004FD52D /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Classes/Connection.m; sourceTree = "<group>"; };
+		43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = Classes/ConnectionDelegate.h; sourceTree = "<group>"; };
+		43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionDelegate.m; path = Classes/ConnectionDelegate.m; sourceTree = "<group>"; };
+		43E6E4A40FF8E911004FD52D /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Classes/ConnectionManager.h; sourceTree = "<group>"; };
+		43E6E4A50FF8E911004FD52D /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Classes/ConnectionManager.m; sourceTree = "<group>"; };
+		43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPURLResponse+Error.h"; path = "Classes/NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
+		43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSHTTPURLResponse+Error.m"; path = "Classes/NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
+		43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+ResponseType.h"; path = "Classes/NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
+		43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+ResponseType.m"; path = "Classes/NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
+		43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjectiveResource.h"; path = "Classes/NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
+		43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjectiveResource.m"; path = "Classes/NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
+		43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResourceConfig.h; path = Classes/ObjectiveResourceConfig.h; sourceTree = "<group>"; };
+		43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveResourceConfig.m; path = Classes/ObjectiveResourceConfig.m; sourceTree = "<group>"; };
+		43E6E4AE0FF8E911004FD52D /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = Classes/Response.h; sourceTree = "<group>"; };
+		43E6E4AF0FF8E911004FD52D /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = Classes/Response.m; sourceTree = "<group>"; };
+		43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResource.h; path = ObjectiveResource/ObjectiveResource.h; sourceTree = "<group>"; };
+		43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSupport.xcodeproj; path = ../lib/objectivesupport/src/ObjectiveSupport.xcodeproj; sourceTree = SOURCE_ROOT; };
+		43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Error.m"; path = "Classes/NSError+Error.m"; sourceTree = "<group>"; };
+		43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Error.h"; path = "Classes/NSError+Error.h"; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResource_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libObjectiveResource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveResource.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				43E6E5EE0FF8EDE9004FD52D /* libObjectiveSupport.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libObjectiveResource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* ObjectiveResource */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = ObjectiveResource;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */,
+				43E6E4A00FF8E911004FD52D /* Connection.h */,
+				43E6E4A10FF8E911004FD52D /* Connection.m */,
+				43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */,
+				43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */,
+				43E6E4A40FF8E911004FD52D /* ConnectionManager.h */,
+				43E6E4A50FF8E911004FD52D /* ConnectionManager.m */,
+				43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */,
+				43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */,
+				43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */,
+				43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */,
+				43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */,
+				43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */,
+				43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */,
+				43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */,
+				43E6E4AE0FF8E911004FD52D /* Response.h */,
+				43E6E4AF0FF8E911004FD52D /* Response.m */,
+				43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */,
+				43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		43E6E4C70FF8E973004FD52D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E4CE0FF8E973004FD52D /* libObjectiveSupport.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* ObjectiveResource_Prefix.pch in Headers */,
+				43E6E4B00FF8E911004FD52D /* Connection.h in Headers */,
+				43E6E4B20FF8E911004FD52D /* ConnectionDelegate.h in Headers */,
+				43E6E4B40FF8E911004FD52D /* ConnectionManager.h in Headers */,
+				43E6E4B60FF8E911004FD52D /* NSHTTPURLResponse+Error.h in Headers */,
+				43E6E4B80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h in Headers */,
+				43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */,
+				43E6E4BC0FF8E911004FD52D /* ObjectiveResourceConfig.h in Headers */,
+				43E6E4BE0FF8E911004FD52D /* Response.h in Headers */,
+				43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */,
+				43E6E5010FF8EA85004FD52D /* NSError+Error.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* ObjectiveResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjectiveResource" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43E6E4D00FF8E98A004FD52D /* PBXTargetDependency */,
+			);
+			name = ObjectiveResource;
+			productName = ObjectiveResource;
+			productReference = D2AAC07E0554694100DB518D /* libObjectiveResource.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjectiveResource" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* ObjectiveResource */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 43E6E4C70FF8E973004FD52D /* Products */;
+					ProjectRef = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* ObjectiveResource */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		43E6E4CE0FF8E973004FD52D /* libObjectiveSupport.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjectiveSupport.a;
+			remoteRef = 43E6E4CD0FF8E973004FD52D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E6E4B10FF8E911004FD52D /* Connection.m in Sources */,
+				43E6E4B30FF8E911004FD52D /* ConnectionDelegate.m in Sources */,
+				43E6E4B50FF8E911004FD52D /* ConnectionManager.m in Sources */,
+				43E6E4B70FF8E911004FD52D /* NSHTTPURLResponse+Error.m in Sources */,
+				43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */,
+				43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */,
+				43E6E4BD0FF8E911004FD52D /* ObjectiveResourceConfig.m in Sources */,
+				43E6E4BF0FF8E911004FD52D /* Response.m in Sources */,
+				43E6E5000FF8EA85004FD52D /* NSError+Error.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43E6E4D00FF8E98A004FD52D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectiveSupport;
+			targetProxy = 43E6E4CF0FF8E98A004FD52D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/ObjectiveResource.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjectiveResource_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ObjectiveResource;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/ObjectiveResource.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjectiveResource_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ObjectiveResource;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../lib//**";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../lib//**";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjectiveResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjectiveResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

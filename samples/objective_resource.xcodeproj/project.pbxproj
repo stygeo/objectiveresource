@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* objective_resourceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* objective_resourceAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2314FF5D0F2F804C003B13AB /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF5C0F2F804C003B13AB /* AddPersonViewController.m */; };
+		2314FF5E0F2F804C003B13AB /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF5C0F2F804C003B13AB /* AddPersonViewController.m */; };
+		2314FF610F2F8060003B13AB /* AddPersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF5F0F2F8060003B13AB /* AddPersonView.xib */; };
+		2314FF620F2F8060003B13AB /* DogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF600F2F8060003B13AB /* DogViewController.xib */; };
+		2314FF630F2F8060003B13AB /* AddPersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF5F0F2F8060003B13AB /* AddPersonView.xib */; };
+		2314FF640F2F8060003B13AB /* DogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF600F2F8060003B13AB /* DogViewController.xib */; };
+		2314FF680F2F806D003B13AB /* EditPersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF650F2F806D003B13AB /* EditPersonController.xib */; };
+		2314FF690F2F806D003B13AB /* EditPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF670F2F806D003B13AB /* EditPersonController.m */; };
+		2314FF6A0F2F806D003B13AB /* EditPersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF650F2F806D003B13AB /* EditPersonController.xib */; };
+		2314FF6B0F2F806D003B13AB /* EditPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF670F2F806D003B13AB /* EditPersonController.m */; };
+		2314FF700F2F8089003B13AB /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6D0F2F8089003B13AB /* PeopleViewController.m */; };
+		2314FF710F2F8089003B13AB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6F0F2F8089003B13AB /* Person.m */; };
+		2314FF720F2F8089003B13AB /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6D0F2F8089003B13AB /* PeopleViewController.m */; };
+		2314FF730F2F8089003B13AB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6F0F2F8089003B13AB /* Person.m */; };
+		2314FF760F2F8094003B13AB /* ViewPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF750F2F8094003B13AB /* ViewPersonController.m */; };
+		2314FF770F2F8094003B13AB /* ViewPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF750F2F8094003B13AB /* ViewPersonController.m */; };
+		2322CD650F2F968000EDF562 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322CD640F2F968000EDF562 /* PersonTest.m */; };
+		23829E0C0EA393700070F0BF /* EditDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829E0B0EA393700070F0BF /* EditDogViewController.m */; };
+		23829E0E0EA393DA0070F0BF /* EditDogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23829E0D0EA393DA0070F0BF /* EditDogViewController.xib */; };
+		23829F010EA39B3B0070F0BF /* ViewDogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829F000EA39B3B0070F0BF /* ViewDogController.m */; };
+		23829F120EA39C430070F0BF /* ViewDogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23829F110EA39C430070F0BF /* ViewDogController.xib */; };
+		239D4FFC0EA690BC00318802 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FFB0EA690BC00318802 /* GTMSenTestCase.m */; };
+		239D50010EA690E600318802 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FE80EA6906100318802 /* GTMIPhoneUnitTestDelegate.m */; };
+		239D50020EA690E600318802 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FE90EA6906100318802 /* GTMIPhoneUnitTestMain.m */; };
+		239D501A0EA691AC00318802 /* DogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350420F30E5E15AA00493366 /* DogViewController.m */; };
+		239D501B0EA691AC00318802 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421280E5E1A0F00493366 /* Dog.m */; };
+		239D501C0EA691AC00318802 /* AddDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421CE0E5E1EC500493366 /* AddDogViewController.m */; };
+		239D502B0EA691AC00318802 /* EditDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829E0B0EA393700070F0BF /* EditDogViewController.m */; };
+		239D502C0EA691AC00318802 /* ViewDogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829F000EA39B3B0070F0BF /* ViewDogController.m */; };
+		239D504D0EA691D800318802 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350421860E5E1BF200493366 /* CoreGraphics.framework */; };
+		239D50830EA691DB00318802 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		239D50CB0EA691DD00318802 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		239D50DA0EA6921800318802 /* DogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D50D90EA6921800318802 /* DogTest.m */; };
+		23B4A6420F092B620021AB9D /* DogErrorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B4A6410F092B620021AB9D /* DogErrorTest.m */; };
+		23B8A4650F55EF7C00F74584 /* AddPersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF5F0F2F8060003B13AB /* AddPersonView.xib */; };
+		23B8A4660F55EF7C00F74584 /* DogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF600F2F8060003B13AB /* DogViewController.xib */; };
+		23B8A4670F55EF7C00F74584 /* EditPersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314FF650F2F806D003B13AB /* EditPersonController.xib */; };
+		23B8A4690F55EF7C00F74584 /* DogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350420F30E5E15AA00493366 /* DogViewController.m */; };
+		23B8A46A0F55EF7C00F74584 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421280E5E1A0F00493366 /* Dog.m */; };
+		23B8A46B0F55EF7C00F74584 /* AddDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421CE0E5E1EC500493366 /* AddDogViewController.m */; };
+		23B8A46E0F55EF7C00F74584 /* EditDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829E0B0EA393700070F0BF /* EditDogViewController.m */; };
+		23B8A46F0F55EF7C00F74584 /* ViewDogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23829F000EA39B3B0070F0BF /* ViewDogController.m */; };
+		23B8A4700F55EF7C00F74584 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FFB0EA690BC00318802 /* GTMSenTestCase.m */; };
+		23B8A4710F55EF7C00F74584 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FE80EA6906100318802 /* GTMIPhoneUnitTestDelegate.m */; };
+		23B8A4720F55EF7C00F74584 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FE90EA6906100318802 /* GTMIPhoneUnitTestMain.m */; };
+		23B8A4730F55EF7C00F74584 /* DogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 239D50D90EA6921800318802 /* DogTest.m */; };
+		23B8A4750F55EF7C00F74584 /* DogErrorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B4A6410F092B620021AB9D /* DogErrorTest.m */; };
+		23B8A48D0F55EF7C00F74584 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF5C0F2F804C003B13AB /* AddPersonViewController.m */; };
+		23B8A48E0F55EF7C00F74584 /* EditPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF670F2F806D003B13AB /* EditPersonController.m */; };
+		23B8A48F0F55EF7C00F74584 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6D0F2F8089003B13AB /* PeopleViewController.m */; };
+		23B8A4900F55EF7C00F74584 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF6F0F2F8089003B13AB /* Person.m */; };
+		23B8A4910F55EF7C00F74584 /* ViewPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2314FF750F2F8094003B13AB /* ViewPersonController.m */; };
+		23B8A4920F55EF7C00F74584 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2322CD640F2F968000EDF562 /* PersonTest.m */; };
+		23B8A4980F55EF7C00F74584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		23B8A4990F55EF7C00F74584 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		23B8A49A0F55EF7C00F74584 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350421860E5E1BF200493366 /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		350420F40E5E15AA00493366 /* DogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350420F30E5E15AA00493366 /* DogViewController.m */; };
+		350421290E5E1A0F00493366 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421280E5E1A0F00493366 /* Dog.m */; };
+		350421870E5E1BF200493366 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350421860E5E1BF200493366 /* CoreGraphics.framework */; };
+		350421CB0E5E1E0900493366 /* AddDogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 350421CA0E5E1E0900493366 /* AddDogView.xib */; };
+		350421CF0E5E1EC500493366 /* AddDogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350421CE0E5E1EC500493366 /* AddDogViewController.m */; };
+		43E6E5740FF8EC59004FD52D /* libObjectiveResource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E6E53F0FF8EBDC004FD52D /* libObjectiveResource.a */; };
+		43E6E5770FF8EC66004FD52D /* libObjectiveResource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E6E53F0FF8EBDC004FD52D /* libObjectiveResource.a */; };
+		43E6E5D30FF8ED6E004FD52D /* libObjectiveResource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E6E53F0FF8EBDC004FD52D /* libObjectiveResource.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43E6E53E0FF8EBDC004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libObjectiveResource.a */;
+			remoteInfo = ObjectiveResource;
+		};
+		43E6E5400FF8EBE7004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteInfo = ObjectiveResource;
+		};
+		43E6E5720FF8EC53004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteInfo = ObjectiveResource;
+		};
+		43E6E5750FF8EC62004FD52D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteInfo = ObjectiveResource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* objective_resourceAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objective_resourceAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* objective_resourceAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objective_resourceAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* objective_resource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objective_resource.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2314FF5B0F2F804C003B13AB /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
+		2314FF5C0F2F804C003B13AB /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
+		2314FF5F0F2F8060003B13AB /* AddPersonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddPersonView.xib; path = Classes/AddPersonView.xib; sourceTree = "<group>"; };
+		2314FF600F2F8060003B13AB /* DogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DogViewController.xib; path = Classes/DogViewController.xib; sourceTree = "<group>"; };
+		2314FF650F2F806D003B13AB /* EditPersonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditPersonController.xib; path = Classes/EditPersonController.xib; sourceTree = "<group>"; };
+		2314FF660F2F806D003B13AB /* EditPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonController.h; sourceTree = "<group>"; };
+		2314FF670F2F806D003B13AB /* EditPersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPersonController.m; sourceTree = "<group>"; };
+		2314FF6C0F2F8089003B13AB /* PeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleViewController.h; sourceTree = "<group>"; };
+		2314FF6D0F2F8089003B13AB /* PeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleViewController.m; sourceTree = "<group>"; };
+		2314FF6E0F2F8089003B13AB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		2314FF6F0F2F8089003B13AB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2314FF740F2F8094003B13AB /* ViewPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPersonController.h; sourceTree = "<group>"; };
+		2314FF750F2F8094003B13AB /* ViewPersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPersonController.m; sourceTree = "<group>"; };
+		2322CD630F2F968000EDF562 /* PersonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTest.h; sourceTree = "<group>"; };
+		2322CD640F2F968000EDF562 /* PersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
+		2322CD890F2F9F3D00EDF562 /* ItemIds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemIds.h; sourceTree = "<group>"; };
+		23829E0A0EA393700070F0BF /* EditDogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDogViewController.h; sourceTree = "<group>"; };
+		23829E0B0EA393700070F0BF /* EditDogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDogViewController.m; sourceTree = "<group>"; };
+		23829E0D0EA393DA0070F0BF /* EditDogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDogViewController.xib; sourceTree = "<group>"; };
+		23829EFF0EA39B3B0070F0BF /* ViewDogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewDogController.h; sourceTree = "<group>"; };
+		23829F000EA39B3B0070F0BF /* ViewDogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewDogController.m; sourceTree = "<group>"; };
+		23829F110EA39C430070F0BF /* ViewDogController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewDogController.xib; sourceTree = "<group>"; };
+		239D4FE70EA6906100318802 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = google_toolbar/UnitTesting/GTMIPhoneUnitTestDelegate.h; sourceTree = SOURCE_ROOT; };
+		239D4FE80EA6906100318802 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = google_toolbar/UnitTesting/GTMIPhoneUnitTestDelegate.m; sourceTree = SOURCE_ROOT; };
+		239D4FE90EA6906100318802 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = google_toolbar/UnitTesting/GTMIPhoneUnitTestMain.m; sourceTree = SOURCE_ROOT; };
+		239D4FF40EA6907E00318802 /* Unit Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		239D4FF60EA6907E00318802 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		239D4FFA0EA690BC00318802 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = google_toolbar/UnitTesting/GTMSenTestCase.h; sourceTree = SOURCE_ROOT; };
+		239D4FFB0EA690BC00318802 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = google_toolbar/UnitTesting/GTMSenTestCase.m; sourceTree = SOURCE_ROOT; };
+		239D4FFD0EA690D700318802 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = google_toolbar/GTMDefines.h; sourceTree = SOURCE_ROOT; };
+		239D50D80EA6921800318802 /* DogTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogTest.h; sourceTree = "<group>"; };
+		239D50D90EA6921800318802 /* DogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogTest.m; sourceTree = "<group>"; };
+		23B4A6400F092B620021AB9D /* DogErrorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogErrorTest.h; sourceTree = "<group>"; };
+		23B4A6410F092B620021AB9D /* DogErrorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogErrorTest.m; sourceTree = "<group>"; };
+		23B8A49E0F55EF7C00F74584 /* Unit Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B8A5340F55F41700F74584 /* Coverage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Coverage.plist; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* objective_resource_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objective_resource_Prefix.pch; sourceTree = "<group>"; };
+		350420F20E5E15AA00493366 /* DogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogViewController.h; sourceTree = "<group>"; };
+		350420F30E5E15AA00493366 /* DogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogViewController.m; sourceTree = "<group>"; };
+		350421270E5E1A0F00493366 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		350421280E5E1A0F00493366 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		350421860E5E1BF200493366 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		350421CA0E5E1E0900493366 /* AddDogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDogView.xib; sourceTree = "<group>"; };
+		350421CD0E5E1EC500493366 /* AddDogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDogViewController.h; sourceTree = "<group>"; };
+		350421CE0E5E1EC500493366 /* AddDogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDogViewController.m; sourceTree = "<group>"; };
+		43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveResource.xcodeproj; path = ../src/ObjectiveResource.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				350421870E5E1BF200493366 /* CoreGraphics.framework in Frameworks */,
+				43E6E5D30FF8ED6E004FD52D /* libObjectiveResource.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239D4FF20EA6907E00318802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E6E5740FF8EC59004FD52D /* libObjectiveResource.a in Frameworks */,
+				239D50CB0EA691DD00318802 /* Foundation.framework in Frameworks */,
+				239D50830EA691DB00318802 /* UIKit.framework in Frameworks */,
+				239D504D0EA691D800318802 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B8A4970F55EF7C00F74584 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E6E5770FF8EC66004FD52D /* libObjectiveResource.a in Frameworks */,
+				23B8A4980F55EF7C00F74584 /* Foundation.framework in Frameworks */,
+				23B8A4990F55EF7C00F74584 /* UIKit.framework in Frameworks */,
+				23B8A49A0F55EF7C00F74584 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				239D4FE30EA68FAC00318802 /* GoogleTestUnit */,
+				350420F10E5E153C00493366 /* Example */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* objective_resource.app */,
+				239D4FF40EA6907E00318802 /* Unit Tests.app */,
+				23B8A49E0F55EF7C00F74584 /* Unit Tests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		239D4FE30EA68FAC00318802 /* GoogleTestUnit */ = {
+			isa = PBXGroup;
+			children = (
+				239D4FFD0EA690D700318802 /* GTMDefines.h */,
+				239D4FFA0EA690BC00318802 /* GTMSenTestCase.h */,
+				239D4FFB0EA690BC00318802 /* GTMSenTestCase.m */,
+				239D4FE70EA6906100318802 /* GTMIPhoneUnitTestDelegate.h */,
+				239D4FE80EA6906100318802 /* GTMIPhoneUnitTestDelegate.m */,
+				239D4FE90EA6906100318802 /* GTMIPhoneUnitTestMain.m */,
+			);
+			name = GoogleTestUnit;
+			sourceTree = "<group>";
+		};
+		239D50D60EA691EC00318802 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				239D50D80EA6921800318802 /* DogTest.h */,
+				239D50D90EA6921800318802 /* DogTest.m */,
+				23B4A6400F092B620021AB9D /* DogErrorTest.h */,
+				23B4A6410F092B620021AB9D /* DogErrorTest.m */,
+				2322CD630F2F968000EDF562 /* PersonTest.h */,
+				2322CD640F2F968000EDF562 /* PersonTest.m */,
+				2322CD890F2F9F3D00EDF562 /* ItemIds.h */,
+			);
+			name = UnitTests;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* objective_resource_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				239D4FF60EA6907E00318802 /* Unit Tests-Info.plist */,
+				23B8A5340F55F41700F74584 /* Coverage.plist */,
+				2314FF600F2F8060003B13AB /* DogViewController.xib */,
+				2314FF5F0F2F8060003B13AB /* AddPersonView.xib */,
+				2314FF650F2F806D003B13AB /* EditPersonController.xib */,
+				23829F110EA39C430070F0BF /* ViewDogController.xib */,
+				23829E0D0EA393DA0070F0BF /* EditDogViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				350421CA0E5E1E0900493366 /* AddDogView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				350421860E5E1BF200493366 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		350420F10E5E153C00493366 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				239D50D60EA691EC00318802 /* UnitTests */,
+				2314FF740F2F8094003B13AB /* ViewPersonController.h */,
+				2314FF750F2F8094003B13AB /* ViewPersonController.m */,
+				2314FF6C0F2F8089003B13AB /* PeopleViewController.h */,
+				2314FF6D0F2F8089003B13AB /* PeopleViewController.m */,
+				2314FF6E0F2F8089003B13AB /* Person.h */,
+				2314FF6F0F2F8089003B13AB /* Person.m */,
+				2314FF660F2F806D003B13AB /* EditPersonController.h */,
+				2314FF670F2F806D003B13AB /* EditPersonController.m */,
+				2314FF5B0F2F804C003B13AB /* AddPersonViewController.h */,
+				2314FF5C0F2F804C003B13AB /* AddPersonViewController.m */,
+				350420F20E5E15AA00493366 /* DogViewController.h */,
+				350420F30E5E15AA00493366 /* DogViewController.m */,
+				350421270E5E1A0F00493366 /* Dog.h */,
+				350421280E5E1A0F00493366 /* Dog.m */,
+				350421CD0E5E1EC500493366 /* AddDogViewController.h */,
+				350421CE0E5E1EC500493366 /* AddDogViewController.m */,
+				23829E0A0EA393700070F0BF /* EditDogViewController.h */,
+				23829E0B0EA393700070F0BF /* EditDogViewController.m */,
+				23829EFF0EA39B3B0070F0BF /* ViewDogController.h */,
+				23829F000EA39B3B0070F0BF /* ViewDogController.m */,
+				1D3623240D0F684500981E51 /* objective_resourceAppDelegate.h */,
+				1D3623250D0F684500981E51 /* objective_resourceAppDelegate.m */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		43E6E53B0FF8EBDC004FD52D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E53F0FF8EBDC004FD52D /* libObjectiveResource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* objective_resource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "objective_resource" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43E6E5410FF8EBE7004FD52D /* PBXTargetDependency */,
+			);
+			name = objective_resource;
+			productName = active_resource;
+			productReference = 1D6058910D05DD3D006BFB54 /* objective_resource.app */;
+			productType = "com.apple.product-type.application";
+		};
+		239D4FF30EA6907E00318802 /* Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 239D4FF90EA6907F00318802 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildPhases = (
+				35C679680F2E7803005FF6CE /* ShellScript */,
+				239D4FF00EA6907E00318802 /* Resources */,
+				239D4FF10EA6907E00318802 /* Sources */,
+				239D4FF20EA6907E00318802 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43E6E5730FF8EC53004FD52D /* PBXTargetDependency */,
+			);
+			name = "Unit Tests";
+			productName = "Unit Tests";
+			productReference = 239D4FF40EA6907E00318802 /* Unit Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23B8A4620F55EF7C00F74584 /* Coverage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B8A49B0F55EF7C00F74584 /* Build configuration list for PBXNativeTarget "Coverage" */;
+			buildPhases = (
+				23B8A4630F55EF7C00F74584 /* ShellScript */,
+				23B8A4640F55EF7C00F74584 /* Resources */,
+				23B8A4680F55EF7C00F74584 /* Sources */,
+				23B8A4970F55EF7C00F74584 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43E6E5760FF8EC62004FD52D /* PBXTargetDependency */,
+			);
+			name = Coverage;
+			productName = "Unit Tests";
+			productReference = 23B8A49E0F55EF7C00F74584 /* Unit Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "objective_resource" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 43E6E53B0FF8EBDC004FD52D /* Products */;
+					ProjectRef = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* objective_resource */,
+				239D4FF30EA6907E00318802 /* Unit Tests */,
+				23B8A4620F55EF7C00F74584 /* Coverage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		43E6E53F0FF8EBDC004FD52D /* libObjectiveResource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libObjectiveResource.a;
+			remoteRef = 43E6E53E0FF8EBDC004FD52D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				350421CB0E5E1E0900493366 /* AddDogView.xib in Resources */,
+				23829E0E0EA393DA0070F0BF /* EditDogViewController.xib in Resources */,
+				23829F120EA39C430070F0BF /* ViewDogController.xib in Resources */,
+				2314FF610F2F8060003B13AB /* AddPersonView.xib in Resources */,
+				2314FF620F2F8060003B13AB /* DogViewController.xib in Resources */,
+				2314FF680F2F806D003B13AB /* EditPersonController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239D4FF00EA6907E00318802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2314FF630F2F8060003B13AB /* AddPersonView.xib in Resources */,
+				2314FF640F2F8060003B13AB /* DogViewController.xib in Resources */,
+				2314FF6A0F2F806D003B13AB /* EditPersonController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B8A4640F55EF7C00F74584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B8A4650F55EF7C00F74584 /* AddPersonView.xib in Resources */,
+				23B8A4660F55EF7C00F74584 /* DogViewController.xib in Resources */,
+				23B8A4670F55EF7C00F74584 /* EditPersonController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23B8A4630F55EF7C00F74584 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd sample_rails_app\nkill `cat tmp/pids/mongrel.pid`\nrake db:migrate\nrake db:test:prepare\nrake db:populate RAILS_ENV=test\n./script/server -e test -p 36313 -d";
+		};
+		35C679680F2E7803005FF6CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd sample_rails_app\nkill `cat tmp/pids/mongrel.pid`\nrake db:migrate\nrake db:test:prepare\nrake db:populate RAILS_ENV=test\n./script/server -e test -p 36313 -d";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* objective_resourceAppDelegate.m in Sources */,
+				350420F40E5E15AA00493366 /* DogViewController.m in Sources */,
+				350421290E5E1A0F00493366 /* Dog.m in Sources */,
+				350421CF0E5E1EC500493366 /* AddDogViewController.m in Sources */,
+				23829E0C0EA393700070F0BF /* EditDogViewController.m in Sources */,
+				23829F010EA39B3B0070F0BF /* ViewDogController.m in Sources */,
+				2314FF5D0F2F804C003B13AB /* AddPersonViewController.m in Sources */,
+				2314FF690F2F806D003B13AB /* EditPersonController.m in Sources */,
+				2314FF700F2F8089003B13AB /* PeopleViewController.m in Sources */,
+				2314FF710F2F8089003B13AB /* Person.m in Sources */,
+				2314FF760F2F8094003B13AB /* ViewPersonController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239D4FF10EA6907E00318802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239D501A0EA691AC00318802 /* DogViewController.m in Sources */,
+				239D501B0EA691AC00318802 /* Dog.m in Sources */,
+				239D501C0EA691AC00318802 /* AddDogViewController.m in Sources */,
+				239D502B0EA691AC00318802 /* EditDogViewController.m in Sources */,
+				239D502C0EA691AC00318802 /* ViewDogController.m in Sources */,
+				239D4FFC0EA690BC00318802 /* GTMSenTestCase.m in Sources */,
+				239D50010EA690E600318802 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				239D50020EA690E600318802 /* GTMIPhoneUnitTestMain.m in Sources */,
+				239D50DA0EA6921800318802 /* DogTest.m in Sources */,
+				23B4A6420F092B620021AB9D /* DogErrorTest.m in Sources */,
+				2314FF5E0F2F804C003B13AB /* AddPersonViewController.m in Sources */,
+				2314FF6B0F2F806D003B13AB /* EditPersonController.m in Sources */,
+				2314FF720F2F8089003B13AB /* PeopleViewController.m in Sources */,
+				2314FF730F2F8089003B13AB /* Person.m in Sources */,
+				2314FF770F2F8094003B13AB /* ViewPersonController.m in Sources */,
+				2322CD650F2F968000EDF562 /* PersonTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B8A4680F55EF7C00F74584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B8A4690F55EF7C00F74584 /* DogViewController.m in Sources */,
+				23B8A46A0F55EF7C00F74584 /* Dog.m in Sources */,
+				23B8A46B0F55EF7C00F74584 /* AddDogViewController.m in Sources */,
+				23B8A46E0F55EF7C00F74584 /* EditDogViewController.m in Sources */,
+				23B8A46F0F55EF7C00F74584 /* ViewDogController.m in Sources */,
+				23B8A4700F55EF7C00F74584 /* GTMSenTestCase.m in Sources */,
+				23B8A4710F55EF7C00F74584 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				23B8A4720F55EF7C00F74584 /* GTMIPhoneUnitTestMain.m in Sources */,
+				23B8A4730F55EF7C00F74584 /* DogTest.m in Sources */,
+				23B8A4750F55EF7C00F74584 /* DogErrorTest.m in Sources */,
+				23B8A48D0F55EF7C00F74584 /* AddPersonViewController.m in Sources */,
+				23B8A48E0F55EF7C00F74584 /* EditPersonController.m in Sources */,
+				23B8A48F0F55EF7C00F74584 /* PeopleViewController.m in Sources */,
+				23B8A4900F55EF7C00F74584 /* Person.m in Sources */,
+				23B8A4910F55EF7C00F74584 /* ViewPersonController.m in Sources */,
+				23B8A4920F55EF7C00F74584 /* PersonTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43E6E5410FF8EBE7004FD52D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectiveResource;
+			targetProxy = 43E6E5400FF8EBE7004FD52D /* PBXContainerItemProxy */;
+		};
+		43E6E5730FF8EC53004FD52D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectiveResource;
+			targetProxy = 43E6E5720FF8EC53004FD52D /* PBXContainerItemProxy */;
+		};
+		43E6E5760FF8EC62004FD52D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectiveResource;
+			targetProxy = 43E6E5750FF8EC62004FD52D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objective_resource_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = objective_resource;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objective_resource_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = objective_resource;
+			};
+			name = Release;
+		};
+		239D4FF70EA6907F00318802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Tests";
+				SDKROOT = iphoneos2.1;
+			};
+			name = Debug;
+		};
+		239D4FF80EA6907F00318802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Tests";
+				SDKROOT = iphoneos2.1;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		23B8A49C0F55EF7C00F74584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = Coverage.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+					"-lgcov",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Tests";
+				SDKROOT = iphoneos2.1;
+			};
+			name = Debug;
+		};
+		23B8A49D0F55EF7C00F74584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "/Users/jjburka/Documents/Projects/yfactorial/objectiveresource/Unit Tests-Info copy.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit Tests";
+				SDKROOT = iphoneos2.1;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objective_resource_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../src//**";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = objective_resource_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../src//**";
+				OTHER_LDFLAGS = "-all_load";
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "objective_resource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		239D4FF90EA6907F00318802 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239D4FF70EA6907F00318802 /* Debug */,
+				239D4FF80EA6907F00318802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23B8A49B0F55EF7C00F74584 /* Build configuration list for PBXNativeTarget "Coverage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B8A49C0F55EF7C00F74584 /* Debug */,
+				23B8A49D0F55EF7C00F74584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "objective_resource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
