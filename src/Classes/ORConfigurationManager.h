@@ -57,8 +57,8 @@ typedef enum {
 @property(nonatomic, copy) NSString * remoteUser;
 @property(nonatomic, copy) NSString * remotePassword;
 
-@property(nonatomic, copy) OAToken * token;
-@property(nonatomic, copy) OAConsumer * consumer;
+@property(nonatomic, retain) OAToken * token;
+@property(nonatomic, retain) OAConsumer * consumer;
 @property(nonatomic, retain) id <OASignatureProviding, NSObject> signatureProvider;
 
 

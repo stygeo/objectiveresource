@@ -13,19 +13,11 @@
 @implementation NSMutableURLRequest(ResponseType)
 
 +(NSMutableURLRequest *) requestWithUrl:(NSURL *)url andMethod:(NSString*)method {
-	NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData
-																											timeoutInterval:[Connection timeout]];
+	NSMutableURLRequest * request;
+	request = [NSMutableURLRequest requestWithURL:url 
+									  cachePolicy:NSURLRequestReloadIgnoringCacheData
+								  timeoutInterval:[Connection timeout]];
 	[request setHTTPMethod:method];
-	switch ([[ORConfigurationManager defaultManager] remoteResponseType]) {
-		case JSONResponse:
-			[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];	
-			[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-			break;
-		default:
-			[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];	
-			[request addValue:@"application/xml" forHTTPHeaderField:@"Accept"];
-			break;
-	}
 	return request;
 }
 

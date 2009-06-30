@@ -53,7 +53,9 @@ static NSMutableArray *activeDelegates;
 	//lots of servers fail to implement http basic authentication correctly, so we pass the credentials even if they are not asked for
 	//TODO make this configurable?
 	NSURL *url = [request URL];
-
+	
+	NSLog(@"%@", url);
+	
 	[self logRequest:request to:[url absoluteString]];
 	
 	ConnectionDelegate *connectionDelegate = [[[ConnectionDelegate alloc] init] autorelease];
@@ -148,8 +150,19 @@ static NSMutableArray *activeDelegates;
 		request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:path] 
 											andMethod:method];
 	}
-
-	[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+	if (body != nil) {
+		[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+		switch ([[ORConfigurationManager defaultManager] remoteResponseType]) {
+			case JSONResponse:
+				[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];	
+				[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+				break;
+			default:
+				[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];	
+				[request addValue:@"application/xml" forHTTPHeaderField:@"Accept"];
+				break;
+		}
+	}
 	return [self sendRequest:request];
 }
 
