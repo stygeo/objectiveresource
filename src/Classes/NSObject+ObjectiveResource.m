@@ -12,119 +12,18 @@
 #import "CoreSupport.h"
 #import "XMLSerializableSupport.h"
 #import "JSONSerializableSupport.h"
-
-static NSString *_activeResourceSite = nil;
-static NSString *_activeResourceUser = nil;
-static NSString *_activeResourcePassword = nil;
-static SEL _activeResourceParseDataMethod = nil;
-static SEL _activeResourceSerializeMethod = nil;
-static NSString *_activeResourceProtocolExtension = @".xml";
-static ORSResponseFormat _format;
-static NSString *_activeResourcePrefix = nil;
-
+#import "ORConfigurationManager.h"
 
 @implementation NSObject (ObjectiveResource)
 
-#pragma mark configuration methods
-+ (NSString *)getRemoteSite {
-	return _activeResourceSite;
-}
-
-+ (void)setRemoteSite:(NSString *)siteURL {
-	if (_activeResourceSite != siteURL) {
-		[_activeResourceSite autorelease];
-		_activeResourceSite = [siteURL copy];
-	}
-}
-
-+ (NSString *)getRemoteUser {
-	return _activeResourceUser;
-}
-
-+ (void)setRemoteUser:(NSString *)user {
-	if (_activeResourceUser != user) {
-		[_activeResourceUser autorelease];
-		_activeResourceUser = [user copy];
-	}
-}
-
-+ (NSString *)getRemotePassword {
-	return _activeResourcePassword;
-}
-
-+ (void)setRemotePassword:(NSString *)password {
-	if (_activeResourcePassword != password) {
-		[_activeResourcePassword autorelease];
-		_activeResourcePassword = [password copy];
-	}
-}
-
-+ (void)setRemoteResponseType:(ORSResponseFormat) format {
-	_format = format;
-	switch (format) {
-		case JSONResponse:
-			[[self class] setRemoteProtocolExtension:@".json"];
-			[[self class] setRemoteParseDataMethod:@selector(fromJSONData:)];
-			[[self class] setRemoteSerializeMethod:@selector(toJSONExcluding:)];
-			break;
-		default:
-			[[self class] setRemoteProtocolExtension:@".xml"];
-			[[self class] setRemoteParseDataMethod:@selector(fromXMLData:)];
-			[[self class] setRemoteSerializeMethod:@selector(toXMLElementExcluding:)];
-			break;
-	}
-}
-
-+ (ORSResponseFormat)getRemoteResponseType {
-	return _format;
-}
-
-+ (SEL)getRemoteParseDataMethod {
-	return (nil == _activeResourceParseDataMethod) ? @selector(fromXMLData:) : _activeResourceParseDataMethod;
-}
-
-+ (void)setRemoteParseDataMethod:(SEL)parseMethod {
-	_activeResourceParseDataMethod = parseMethod;
-}
-
-+ (SEL) getRemoteSerializeMethod {
-	return (nil == _activeResourceSerializeMethod) ? @selector(toXMLElementExcluding:) : _activeResourceSerializeMethod;
-}
-
-+ (void) setRemoteSerializeMethod:(SEL)serializeMethod {
-	_activeResourceSerializeMethod = serializeMethod;
-}
-
-+ (NSString *)getRemoteProtocolExtension {
-	return _activeResourceProtocolExtension;
-}
-
-+ (void)setRemoteProtocolExtension:(NSString *)protocolExtension {
-	if (_activeResourceProtocolExtension != protocolExtension) {
-		[_activeResourceProtocolExtension autorelease];
-		_activeResourceProtocolExtension = [protocolExtension copy];
-	}
-}
-
-// Prefix additions
-+ (NSString *)getLocalClassesPrefix {
-	return _activeResourcePrefix;
-}
-
-+ (void)setLocalClassesPrefix:(NSString *)prefix {
-	if (prefix != _activeResourcePrefix) {
-		[_activeResourcePrefix autorelease];
-		_activeResourcePrefix = [prefix copy];
-	}
-}
-
 // Find all items 
 + (NSArray *)findAllRemoteWithResponse:(NSError **)aError {
-	Response *res = [Connection get:[self getRemoteCollectionPath] withUser:[[self class] getRemoteUser] andPassword:[[self class]  getRemotePassword]];
+	Response *res = [Connection get:[self getRemoteCollectionPath]];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
-	return [self performSelector:[self getRemoteParseDataMethod] withObject:res.body];
+	return [self performSelector:[[ORConfigurationManager defaultManager] remoteParseDataMethod] 
+					  withObject:res.body];
 }
 
 + (NSArray *)findAllRemote {
@@ -133,11 +32,12 @@ static NSString *_activeResourcePrefix = nil;
 }
 
 + (id)findRemote:(NSString *)elementId withResponse:(NSError **)aError {
-	Response *res = [Connection get:[self getRemoteElementPath:elementId] withUser:[[self class] getRemoteUser] andPassword:[[self class]  getRemotePassword]];
+	Response *res = [Connection get:[self getRemoteElementPath:elementId]];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
-	return [self performSelector:[self getRemoteParseDataMethod] withObject:res.body];
+	return [self performSelector:[[ORConfigurationManager defaultManager] remoteParseDataMethod] 
+					  withObject:res.body];
 }
 
 + (id)findRemote:(NSString *)elementId {
@@ -147,8 +47,9 @@ static NSString *_activeResourcePrefix = nil;
 
 + (NSString *)getRemoteElementName {
 	NSString * remoteElementName = NSStringFromClass([self class]);
-	if (_activeResourcePrefix != nil) {
-		remoteElementName = [remoteElementName substringFromIndex:[_activeResourcePrefix length]];
+	NSString * prefix = [[ORConfigurationManager defaultManager] localPrefix];
+	if (prefix != nil) {
+		remoteElementName = [remoteElementName substringFromIndex:[prefix length]];
 	}
 	return [[remoteElementName stringByReplacingCharactersInRange:NSMakeRange(0, 1) 
 													   withString:[[remoteElementName substringWithRange:NSMakeRange(0, 1)] 
@@ -161,11 +62,11 @@ static NSString *_activeResourcePrefix = nil;
 }
 
 + (NSString *)getRemoteElementPath:(NSString *)elementId {
-	return [NSString stringWithFormat:@"%@%@/%@%@", [self getRemoteSite], [self getRemoteCollectionName], elementId, [self getRemoteProtocolExtension]];
+	return [NSString stringWithFormat:@"%@%@/%@%@", [[ORConfigurationManager defaultManager] remoteSite], [self getRemoteCollectionName], elementId, [[ORConfigurationManager defaultManager] remoteProtocolExtension]];
 }
 
 + (NSString *)getRemoteCollectionPath {
-	return [[[self getRemoteSite] stringByAppendingString:[self getRemoteCollectionName]] stringByAppendingString:[self getRemoteProtocolExtension]];
+	return [[[[ORConfigurationManager defaultManager] remoteSite] stringByAppendingString:[self getRemoteCollectionName]] stringByAppendingString:[[ORConfigurationManager defaultManager] remoteProtocolExtension]];
 }
 
 + (NSString *)getRemoteCollectionPathWithParameters:(NSDictionary *)parameters {
@@ -188,7 +89,8 @@ static NSString *_activeResourcePrefix = nil;
 
 // Converts the object to the data format expected by the server
 - (NSString *)convertToRemoteExpectedType {	  
-  return [self performSelector:[[self class] getRemoteSerializeMethod] withObject:[self excludedPropertyNames]];
+  return [self performSelector:[[ORConfigurationManager defaultManager] remoteSerializeMethod] 
+					withObject:[self excludedPropertyNames]];
 }
 
 
@@ -223,8 +125,9 @@ static NSString *_activeResourcePrefix = nil;
 
 - (NSString *)getRemoteClassIdName {
 	NSString * remoteElementName = NSStringFromClass([self class]);
-	if (_activeResourcePrefix != nil) {
-		remoteElementName = [remoteElementName substringFromIndex:[_activeResourcePrefix length]];
+	NSString * prefix = [[ORConfigurationManager defaultManager] localPrefix];
+	if (prefix != nil) {
+		remoteElementName = [remoteElementName substringFromIndex:[prefix length]];
 	}
 	return [NSString stringWithFormat:@"%@Id", 
 			[remoteElementName stringByReplacingCharactersInRange:NSMakeRange(0, 1) 
@@ -232,12 +135,15 @@ static NSString *_activeResourcePrefix = nil;
 }
 
 - (BOOL)createRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {
-	Response *res = [Connection post:[self convertToRemoteExpectedType] to:path withUser:[[self class]  getRemoteUser] andPassword:[[self class]  getRemotePassword]];
+	Response *res = [Connection post:[self convertToRemoteExpectedType] 
+								  to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
 	if ([res isSuccess]) {
-		NSDictionary *newProperties = [[[self class] performSelector:[[self class] getRemoteParseDataMethod] withObject:res.body] properties];
+		NSDictionary *newProperties = [[[self class] performSelector:[[ORConfigurationManager defaultManager] remoteParseDataMethod] 
+														  withObject:res.body] 
+									   properties];
 		[self setProperties:newProperties];
 		return YES;
 	}
@@ -247,14 +153,13 @@ static NSString *_activeResourcePrefix = nil;
 }
 
 -(BOOL)updateRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {	
-	Response *res = [Connection put:[self convertToRemoteExpectedType] to:path 
-						   withUser:[[self class]  getRemoteUser] andPassword:[[self class]  getRemotePassword]];
+	Response *res = [Connection put:[self convertToRemoteExpectedType] to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
 	if ([res isSuccess]) {
 		if([(NSString *)[res.headers objectForKey:@"Content-Length"] intValue] > 1) {
-			NSDictionary *newProperties = [[[self class] performSelector:[[self class] getRemoteParseDataMethod] withObject:res.body] properties];
+			NSDictionary *newProperties = [[[self class] performSelector:[[ORConfigurationManager defaultManager] remoteParseDataMethod] withObject:res.body] properties];
 			[self setProperties:newProperties];
 		}
 		return YES;
@@ -262,11 +167,10 @@ static NSString *_activeResourcePrefix = nil;
 	else {
 		return NO;
 	}
-	
 }
 
 - (BOOL)destroyRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {
-	Response *res = [Connection delete:path withUser:[[self class]  getRemoteUser] andPassword:[[self class]  getRemotePassword]];
+	Response *res = [Connection delete:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}

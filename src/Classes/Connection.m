@@ -11,6 +11,9 @@
 #import "NSData+Additions.h"
 #import "NSMutableURLRequest+ResponseType.h"
 #import "ConnectionDelegate.h"
+#import "ORConfigurationManager.h"
+#import "OAuthConsumer/OAuthConsumer.h"
+
 
 //#define debugLog(...) NSLog(__VA_ARGS__)
 #ifndef debugLog(...)
@@ -45,31 +48,11 @@ static NSMutableArray *activeDelegates;
 	}
 }
 
-+ (Response *)sendRequest:(NSMutableURLRequest *)request withUser:(NSString *)user andPassword:(NSString *)password {
++ (Response *)sendRequest:(NSMutableURLRequest *)request {
 	
 	//lots of servers fail to implement http basic authentication correctly, so we pass the credentials even if they are not asked for
 	//TODO make this configurable?
 	NSURL *url = [request URL];
-	if(user && password) {
-		NSString *authString = [[[NSString stringWithFormat:@"%@:%@",user, password] dataUsingEncoding:NSUTF8StringEncoding] base64Encoding];
-		[request addValue:[NSString stringWithFormat:@"Basic %@", authString] forHTTPHeaderField:@"Authorization"]; 
-		NSString *escapedUser = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
-																																								(CFStringRef)user, NULL, (CFStringRef)@"@.:", kCFStringEncodingUTF8);
-		NSString *escapedPassword = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
-																																										(CFStringRef)password, NULL, (CFStringRef)@"@.:", kCFStringEncodingUTF8);
-		NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@:%@@%@",[url scheme],escapedUser,escapedPassword,[url host],nil];
-		if([url port]) {
-			[urlString appendFormat:@":%@",[url port],nil];
-		}
-		[urlString appendString:[url path]];
-		if([url query]){
-			[urlString appendFormat:@"?%@",[url query],nil];
-		}
-		[request setURL:[NSURL URLWithString:urlString]];
-		[escapedUser release];
-		[escapedPassword release];
-	}
-
 
 	[self logRequest:request to:[url absoluteString]];
 	
@@ -104,36 +87,86 @@ static NSMutableArray *activeDelegates;
 	return resp;
 }
 
-+ (Response *)post:(NSString *)body to:(NSString *)url {
-	return [self post:body to:url withUser:@"X" andPassword:@"X"];
-}
++ (Response *)sendBy:(NSString *)method withBody:(NSString *)body to:(NSString *)path {
+	NSMutableURLRequest * request;
+	NSURL * url;
+	ORConfigurationManager * defaultManager;
+	
+	url = [NSURL URLWithString:path];
+	defaultManager = [ORConfigurationManager defaultManager];
+		
+	if ([defaultManager authenticationMethod] == ORAuthenticationMethodHTTPBasic) {
+		NSString * user = [defaultManager remoteUser];
+		NSString * password = [defaultManager remotePassword];
+		NSString *authString = [[[NSString stringWithFormat:@"%@:%@",user, password] dataUsingEncoding:NSUTF8StringEncoding] base64Encoding];
+		[request addValue:[NSString stringWithFormat:@"Basic %@", authString] forHTTPHeaderField:@"Authorization"]; 
+		NSString *escapedUser = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
+																					(CFStringRef)user, NULL, (CFStringRef)@"@.:", kCFStringEncodingUTF8);
+		NSString *escapedPassword = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
+																						(CFStringRef)password, NULL, (CFStringRef)@"@.:", kCFStringEncodingUTF8);
+		NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@:%@@%@",[url scheme],escapedUser,escapedPassword,[url host],nil];
+		if([url port]) {
+			[urlString appendFormat:@":%@",[url port],nil];
+		}
+		[urlString appendString:[url path]];
+		if([url query]){
+			[urlString appendFormat:@"?%@",[url query],nil];
+		}
+		
+		request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:urlString] 
+											andMethod:method];
+		[escapedUser release];
+		[escapedPassword release];
+		
+	} else if ([defaultManager authenticationMethod] == ORAuthenticationMethodOAuth) {
+		OARequestParameter * nameParam;
+		NSArray * query = [[url query] componentsSeparatedByString:@"&"];
+		NSMutableArray * parameters = [[[NSMutableArray alloc] init] autorelease];
+		NSURL * cleanURL = [[NSURL alloc] initWithScheme:[url scheme] 
+											   host:[url host] 
+											   path:[url path]];
+		
+		for (id parameter in query) {
+			NSArray * components = [parameter componentsSeparatedByString:@"="];
+			nameParam = [[OARequestParameter alloc] initWithName:[components objectAtIndex:0]
+														   value:[components objectAtIndex:1]];
+			[parameters addObject:nameParam];
+			[nameParam release];
+		}
+		
+		request = [[OAMutableURLRequest alloc] initWithURL:cleanURL
+												  consumer:[defaultManager consumer]
+													 token:[defaultManager token]
+													 realm:nil
+										 signatureProvider:[defaultManager signatureProvider]];
+		[request setHTTPMethod:method];
+		[request setParameters:parameters];
+		[(OAMutableURLRequest *)request prepare];
+		[request autorelease];
+		[cleanURL release];
+	} else if ([defaultManager authenticationMethod] == ORAuthenticationMethodNone) {
+		request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:path] 
+											andMethod:method];
+	}
 
-+ (Response *)sendBy:(NSString *)method withBody:(NSString *)body to:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password{
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:url] andMethod:method];
 	[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
-	return [self sendRequest:request withUser:user andPassword:password];
+	return [self sendRequest:request];
 }
 
-+ (Response *)post:(NSString *)body to:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password{
-	return [self sendBy:@"POST" withBody:body to:url withUser:user andPassword:password];
++ (Response *)post:(NSString *)body to:(NSString *)url {
+	return [self sendBy:@"POST" withBody:body to:url];
 }
 
-+ (Response *)put:(NSString *)body to:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password{
-	return [self sendBy:@"PUT" withBody:body to:url withUser:user andPassword:password];
++ (Response *)put:(NSString *)body to:(NSString *)url {
+	return [self sendBy:@"PUT" withBody:body to:url];
 }
 
 + (Response *)get:(NSString *)url {
-	return [self get:url withUser:@"X" andPassword:@"X"];
+	return [self sendBy:@"GET" withBody:nil to:url];
 }
 
-+ (Response *)get:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password {
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:url] andMethod:@"GET"];
-	return [self sendRequest:request withUser:user andPassword:password];
-}
-
-+ (Response *)delete:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password {
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:url] andMethod:@"DELETE"];
-	return [self sendRequest:request withUser:user andPassword:password];
++ (Response *)delete:(NSString *)url {
+	return [self sendBy:@"DELETE" withBody:nil to:url];
 }
 
 + (void) cancelAllActiveConnections {

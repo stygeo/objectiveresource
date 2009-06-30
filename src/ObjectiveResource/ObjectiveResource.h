@@ -7,5 +7,5 @@
 //
 
 #import "NSObject+ObjectiveResource.h"
-#import "ObjectiveResourceConfig.h"
+#import "ORConfigurationManager.h"
 #import "NSError+Error.h"

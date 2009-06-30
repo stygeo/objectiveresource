@@ -7,7 +7,7 @@
 //
 
 #import "NSHTTPURLResponse+Error.h"
-#import "ObjectiveResourceConfig.h"
+#import "ORConfigurationManager.h"
 
 @implementation NSHTTPURLResponse(Error)
 
@@ -21,7 +21,7 @@
 
 + (NSArray *)errorArrayForBody:(NSData *)data {
 	NSMutableArray *returnStrings = [NSMutableArray array];
-	NSArray *errorArrays = [[self class] performSelector:[ObjectiveResourceConfig getParseDataMethod] withObject:data];
+	NSArray *errorArrays = [[self class] performSelector:[[ORConfigurationManager defaultManager] remoteParseDataMethod] withObject:data];
 	for (NSArray *error in errorArrays) [returnStrings addObject:[error componentsJoinedByString:@" "]];
 	return returnStrings;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43C256580FFA127A00EFB62D /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C256530FFA123700EFB62D /* libOAuthConsumer.a */; };
 		43E6E4B00FF8E911004FD52D /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A00FF8E911004FD52D /* Connection.h */; };
 		43E6E4B10FF8E911004FD52D /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A10FF8E911004FD52D /* Connection.m */; };
 		43E6E4B20FF8E911004FD52D /* ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */; };
@@ -19,8 +20,8 @@
 		43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */; };
 		43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */; };
 		43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */; };
-		43E6E4BC0FF8E911004FD52D /* ObjectiveResourceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */; };
-		43E6E4BD0FF8E911004FD52D /* ObjectiveResourceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */; };
+		43E6E4BC0FF8E911004FD52D /* ORConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */; };
+		43E6E4BD0FF8E911004FD52D /* ORConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */; };
 		43E6E4BE0FF8E911004FD52D /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AE0FF8E911004FD52D /* Response.h */; };
 		43E6E4BF0FF8E911004FD52D /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AF0FF8E911004FD52D /* Response.m */; };
 		43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */; };
@@ -32,23 +33,38 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		43C256520FFA123700EFB62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = OAuthConsumer;
+		};
+		43C256590FFA128700EFB62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = OAuthConsumer;
+		};
 		43E6E4CD0FF8E973004FD52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libObjectiveSupport.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ObjectiveSupport;
 		};
 		43E6E4CF0FF8E98A004FD52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveSupport */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ObjectiveSupport;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../lib/oauth-objc/src/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		43E6E4A00FF8E911004FD52D /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Classes/Connection.h; sourceTree = "<group>"; };
 		43E6E4A10FF8E911004FD52D /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Classes/Connection.m; sourceTree = "<group>"; };
 		43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = Classes/ConnectionDelegate.h; sourceTree = "<group>"; };
@@ -61,8 +77,8 @@
 		43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+ResponseType.m"; path = "Classes/NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
 		43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjectiveResource.h"; path = "Classes/NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
 		43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjectiveResource.m"; path = "Classes/NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
-		43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResourceConfig.h; path = Classes/ObjectiveResourceConfig.h; sourceTree = "<group>"; };
-		43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectiveResourceConfig.m; path = Classes/ObjectiveResourceConfig.m; sourceTree = "<group>"; };
+		43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORConfigurationManager.h; path = Classes/ORConfigurationManager.h; sourceTree = "<group>"; };
+		43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConfigurationManager.m; path = Classes/ORConfigurationManager.m; sourceTree = "<group>"; };
 		43E6E4AE0FF8E911004FD52D /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = Classes/Response.h; sourceTree = "<group>"; };
 		43E6E4AF0FF8E911004FD52D /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = Classes/Response.m; sourceTree = "<group>"; };
 		43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResource.h; path = ObjectiveResource/ObjectiveResource.h; sourceTree = "<group>"; };
@@ -81,6 +97,7 @@
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				43E6E5EE0FF8EDE9004FD52D /* libObjectiveSupport.a in Frameworks */,
+				43C256580FFA127A00EFB62D /* libOAuthConsumer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +115,8 @@
 		0867D691FE84028FC02AAC07 /* ObjectiveResource */ = {
 			isa = PBXGroup;
 			children = (
-				43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */,
+				43C255630FFA0DDB00EFB62D /* OAuth */,
+				43C255620FFA0DCD00EFB62D /* ObjectiveSupport */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -131,12 +149,12 @@
 				43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */,
 				43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */,
 				43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */,
-				43E6E4AC0FF8E911004FD52D /* ObjectiveResourceConfig.h */,
-				43E6E4AD0FF8E911004FD52D /* ObjectiveResourceConfig.m */,
 				43E6E4AE0FF8E911004FD52D /* Response.h */,
 				43E6E4AF0FF8E911004FD52D /* Response.m */,
 				43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */,
 				43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */,
+				43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */,
+				43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -147,6 +165,30 @@
 				AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		43C255620FFA0DCD00EFB62D /* ObjectiveSupport */ = {
+			isa = PBXGroup;
+			children = (
+				43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */,
+			);
+			name = ObjectiveSupport;
+			sourceTree = "<group>";
+		};
+		43C255630FFA0DDB00EFB62D /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */,
+			);
+			name = OAuth;
+			sourceTree = "<group>";
+		};
+		43C2564F0FFA123700EFB62D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43C256530FFA123700EFB62D /* libOAuthConsumer.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		43E6E4C70FF8E973004FD52D /* Products */ = {
@@ -171,7 +213,7 @@
 				43E6E4B60FF8E911004FD52D /* NSHTTPURLResponse+Error.h in Headers */,
 				43E6E4B80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h in Headers */,
 				43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */,
-				43E6E4BC0FF8E911004FD52D /* ObjectiveResourceConfig.h in Headers */,
+				43E6E4BC0FF8E911004FD52D /* ORConfigurationManager.h in Headers */,
 				43E6E4BE0FF8E911004FD52D /* Response.h in Headers */,
 				43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */,
 				43E6E5010FF8EA85004FD52D /* NSError+Error.h in Headers */,
@@ -193,6 +235,7 @@
 			);
 			dependencies = (
 				43E6E4D00FF8E98A004FD52D /* PBXTargetDependency */,
+				43C2565A0FFA128700EFB62D /* PBXTargetDependency */,
 			);
 			name = ObjectiveResource;
 			productName = ObjectiveResource;
@@ -212,6 +255,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 43C2564F0FFA123700EFB62D /* Products */;
+					ProjectRef = 43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */;
+				},
+				{
 					ProductGroup = 43E6E4C70FF8E973004FD52D /* Products */;
 					ProjectRef = 43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */;
 				},
@@ -224,6 +271,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		43C256530FFA123700EFB62D /* libOAuthConsumer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuthConsumer.a;
+			remoteRef = 43C256520FFA123700EFB62D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		43E6E4CE0FF8E973004FD52D /* libObjectiveSupport.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -244,7 +298,7 @@
 				43E6E4B70FF8E911004FD52D /* NSHTTPURLResponse+Error.m in Sources */,
 				43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */,
 				43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */,
-				43E6E4BD0FF8E911004FD52D /* ObjectiveResourceConfig.m in Sources */,
+				43E6E4BD0FF8E911004FD52D /* ORConfigurationManager.m in Sources */,
 				43E6E4BF0FF8E911004FD52D /* Response.m in Sources */,
 				43E6E5000FF8EA85004FD52D /* NSError+Error.m in Sources */,
 			);
@@ -253,6 +307,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		43C2565A0FFA128700EFB62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthConsumer;
+			targetProxy = 43C256590FFA128700EFB62D /* PBXContainerItemProxy */;
+		};
 		43E6E4D00FF8E98A004FD52D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ObjectiveSupport;

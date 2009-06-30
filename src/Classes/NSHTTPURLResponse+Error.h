@@ -12,4 +12,5 @@
 -(BOOL) isSuccess;
 + (NSError *)buildResponseError:(int)statusCode withBody:(NSData *)data;
 + (NSArray *)errorArrayForBody:(NSData *)data;
+
 @end

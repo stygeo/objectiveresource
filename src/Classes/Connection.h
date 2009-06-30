@@ -11,12 +11,11 @@
 @interface Connection : NSObject
 + (void) setTimeout:(float)timeout;
 + (float) timeout;
+
 + (Response *)post:(NSString *)body to:(NSString *)url;
-+ (Response *)post:(NSString *)body to:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password;
-+ (Response *)get:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password;
++ (Response *)put:(NSString *)body to:(NSString *)url;
 + (Response *)get:(NSString *)url;
-+ (Response *)put:(NSString *)body to:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password;
-+ (Response *)delete:(NSString *)url withUser:(NSString *)user andPassword:(NSString *)password;
++ (Response *)delete:(NSString *)url;
 
 + (void) cancelAllActiveConnections;
 

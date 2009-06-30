@@ -1,3 +1,7 @@
-[submodule "Classes/lib/objective_support"]
+[submodule "lib/objective_support"]
 	path = lib/objective_support
 	url = git://github.com/lgalabru/objectivesupport.git
+
+[submodule "lib/oauth-objc"]
+	path = lib/oauth-objc
+	url = git://github.com/lgalabru/oauth-objc.git

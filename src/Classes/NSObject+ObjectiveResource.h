@@ -10,33 +10,6 @@
 
 @interface NSObject (ObjectiveResource)
 
-
-// Response Formats
-typedef enum {
-	XmlResponse = 0,
-	JSONResponse,
-} ORSResponseFormat;
-
-// Resource configuration
-+ (NSString *)getRemoteSite;
-+ (void)setRemoteSite:(NSString*)siteURL;
-+ (NSString *)getRemoteUser;
-+ (void)setRemoteUser:(NSString *)user;
-+ (NSString *)getRemotePassword;
-+ (void)setRemotePassword:(NSString *)password;
-+ (SEL)getRemoteParseDataMethod;
-+ (void)setRemoteParseDataMethod:(SEL)parseMethod;
-+ (SEL) getRemoteSerializeMethod;
-+ (void) setRemoteSerializeMethod:(SEL)serializeMethod;
-+ (NSString *)getRemoteProtocolExtension;
-+ (void)setRemoteProtocolExtension:(NSString *)protocolExtension;
-+ (void)setRemoteResponseType:(ORSResponseFormat) format;
-+ (ORSResponseFormat)getRemoteResponseType;
-
-// Prefix additions
-+ (NSString *)getLocalClassesPrefix;
-+ (void)setLocalClassesPrefix:(NSString *)prefix;
-
 // Finders
 + (NSArray *)findAllRemote;
 + (NSArray *)findAllRemoteWithResponse:(NSError **)aError;
