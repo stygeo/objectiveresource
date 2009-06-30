@@ -64,6 +64,7 @@ static NSMutableArray *activeDelegates;
 	NSURLConnection *connection = [[[NSURLConnection alloc] initWithRequest:request delegate:connectionDelegate startImmediately:NO] autorelease];
 	connectionDelegate.connection = connection;
 
+	[[UIApplication sharedApplication]	setNetworkActivityIndicatorVisible:YES];
 	
 	//use a custom runloop
 	static NSString *runLoopMode = @"com.yfactorial.objectiveresource.connectionLoop";
@@ -76,6 +77,8 @@ static NSMutableArray *activeDelegates;
 								   withBody:connectionDelegate.data 
 								   andError:connectionDelegate.error];
 	[resp log];
+	
+	[[UIApplication sharedApplication]	setNetworkActivityIndicatorVisible:NO];
 	
 	[activeDelegates removeObject:connectionDelegate];
 	
