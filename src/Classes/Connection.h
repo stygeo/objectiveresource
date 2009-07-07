@@ -6,6 +6,8 @@
 //  Copyright 2008 yFactorial, LLC. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @class Response;
 
 @interface Connection : NSObject
