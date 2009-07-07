@@ -83,28 +83,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libObjectiveResource.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ObjectiveResource;
 		};
 		43E6E5400FF8EBE7004FD52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ObjectiveResource;
 		};
 		43E6E5720FF8EC53004FD52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ObjectiveResource;
 		};
 		43E6E5750FF8EC62004FD52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43E6E53A0FF8EBDC004FD52D /* ObjectiveResource.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* ObjectiveResource */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = ObjectiveResource;
 		};
 /* End PBXContainerItemProxy section */

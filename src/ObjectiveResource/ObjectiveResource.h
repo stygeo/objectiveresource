@@ -6,8 +6,8 @@
 //  Copyright 2008 yFactorial, LLC. All rights reserved.
 //
 
-#import "NSObject+ObjectiveResource.h"
-#import "Connection.h"
-#import "Response.h"
-#import "ORConfigurationManager.h"
-#import "NSError+Error.h"
+#import "ObjectiveResource/NSObject+ObjectiveResource.h"
+#import "ObjectiveResource/Connection.h"
+#import "ObjectiveResource/Response.h"
+#import "ObjectiveResource/ORConfigurationManager.h"
+#import "ObjectiveResource/NSError+Error.h"

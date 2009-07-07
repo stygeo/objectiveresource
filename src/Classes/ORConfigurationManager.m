@@ -6,7 +6,7 @@
 //  Copyright 2009 Silicon Frog. All rights reserved.
 //
 
-#import "ORConfigurationManager.h"
+#import "ObjectiveResource/ORConfigurationManager.h"
 
 
 @implementation ORConfigurationManager

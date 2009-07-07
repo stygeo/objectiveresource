@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4348F0B4100365740023A303 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AA100365740023A303 /* Connection.h */; };
+		4348F0B5100365740023A303 /* ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AB100365740023A303 /* ConnectionDelegate.h */; };
+		4348F0B6100365740023A303 /* ConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AC100365740023A303 /* ConnectionManager.h */; };
+		4348F0B7100365740023A303 /* NSError+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AD100365740023A303 /* NSError+Error.h */; };
+		4348F0B8100365740023A303 /* NSHTTPURLResponse+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AE100365740023A303 /* NSHTTPURLResponse+Error.h */; };
+		4348F0B9100365740023A303 /* NSMutableURLRequest+ResponseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0AF100365740023A303 /* NSMutableURLRequest+ResponseType.h */; };
+		4348F0BA100365740023A303 /* NSObject+ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0B0100365740023A303 /* NSObject+ObjectiveResource.h */; };
+		4348F0BB100365740023A303 /* ORConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0B1100365740023A303 /* ORConfigurationManager.h */; };
+		4348F0BC100365740023A303 /* ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0B2100365740023A303 /* ObjectiveResource.h */; };
+		4348F0BD100365740023A303 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 4348F0B3100365740023A303 /* Response.h */; };
+		4348F0C0100365890023A303 /* NSError+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 4348F0BE100365890023A303 /* NSError+Error.m */; };
+		4348F0C1100365890023A303 /* ORConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4348F0BF100365890023A303 /* ORConfigurationManager.m */; };
 		43C256580FFA127A00EFB62D /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C256530FFA123700EFB62D /* libOAuthConsumer.a */; };
-		43E6E4B00FF8E911004FD52D /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A00FF8E911004FD52D /* Connection.h */; };
 		43E6E4B10FF8E911004FD52D /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A10FF8E911004FD52D /* Connection.m */; };
-		43E6E4B20FF8E911004FD52D /* ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */; };
 		43E6E4B30FF8E911004FD52D /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */; };
-		43E6E4B40FF8E911004FD52D /* ConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A40FF8E911004FD52D /* ConnectionManager.h */; };
 		43E6E4B50FF8E911004FD52D /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A50FF8E911004FD52D /* ConnectionManager.m */; };
-		43E6E4B60FF8E911004FD52D /* NSHTTPURLResponse+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */; };
 		43E6E4B70FF8E911004FD52D /* NSHTTPURLResponse+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */; };
-		43E6E4B80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */; };
 		43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */; };
-		43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */; };
 		43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */; };
-		43E6E4BC0FF8E911004FD52D /* ORConfigurationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */; };
-		43E6E4BD0FF8E911004FD52D /* ORConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */; };
-		43E6E4BE0FF8E911004FD52D /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4AE0FF8E911004FD52D /* Response.h */; };
 		43E6E4BF0FF8E911004FD52D /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4AF0FF8E911004FD52D /* Response.m */; };
-		43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */; };
-		43E6E5000FF8EA85004FD52D /* NSError+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */; };
-		43E6E5010FF8EA85004FD52D /* NSError+Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */; };
 		43E6E5EE0FF8EDE9004FD52D /* libObjectiveSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E6E4CE0FF8E973004FD52D /* libObjectiveSupport.a */; };
 		AA747D9F0F9514B9006C5449 /* ObjectiveResource_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
@@ -64,27 +64,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4348F0AA100365740023A303 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ObjectiveResource/Connection.h; sourceTree = "<group>"; };
+		4348F0AB100365740023A303 /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = ObjectiveResource/ConnectionDelegate.h; sourceTree = "<group>"; };
+		4348F0AC100365740023A303 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = ObjectiveResource/ConnectionManager.h; sourceTree = "<group>"; };
+		4348F0AD100365740023A303 /* NSError+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Error.h"; path = "ObjectiveResource/NSError+Error.h"; sourceTree = "<group>"; };
+		4348F0AE100365740023A303 /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPURLResponse+Error.h"; path = "ObjectiveResource/NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
+		4348F0AF100365740023A303 /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+ResponseType.h"; path = "ObjectiveResource/NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
+		4348F0B0100365740023A303 /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjectiveResource.h"; path = "ObjectiveResource/NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
+		4348F0B1100365740023A303 /* ORConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORConfigurationManager.h; path = ObjectiveResource/ORConfigurationManager.h; sourceTree = "<group>"; };
+		4348F0B2100365740023A303 /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResource.h; path = ObjectiveResource/ObjectiveResource.h; sourceTree = "<group>"; };
+		4348F0B3100365740023A303 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = ObjectiveResource/Response.h; sourceTree = "<group>"; };
+		4348F0BE100365890023A303 /* NSError+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Error.m"; path = "Classes/NSError+Error.m"; sourceTree = "<group>"; };
+		4348F0BF100365890023A303 /* ORConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConfigurationManager.m; path = Classes/ORConfigurationManager.m; sourceTree = "<group>"; };
 		43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../lib/oauth-objc/src/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		43E6E4A00FF8E911004FD52D /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Classes/Connection.h; sourceTree = "<group>"; };
 		43E6E4A10FF8E911004FD52D /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Classes/Connection.m; sourceTree = "<group>"; };
-		43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionDelegate.h; path = Classes/ConnectionDelegate.h; sourceTree = "<group>"; };
 		43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionDelegate.m; path = Classes/ConnectionDelegate.m; sourceTree = "<group>"; };
-		43E6E4A40FF8E911004FD52D /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Classes/ConnectionManager.h; sourceTree = "<group>"; };
 		43E6E4A50FF8E911004FD52D /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Classes/ConnectionManager.m; sourceTree = "<group>"; };
-		43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPURLResponse+Error.h"; path = "Classes/NSHTTPURLResponse+Error.h"; sourceTree = "<group>"; };
 		43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSHTTPURLResponse+Error.m"; path = "Classes/NSHTTPURLResponse+Error.m"; sourceTree = "<group>"; };
-		43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+ResponseType.h"; path = "Classes/NSMutableURLRequest+ResponseType.h"; sourceTree = "<group>"; };
 		43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+ResponseType.m"; path = "Classes/NSMutableURLRequest+ResponseType.m"; sourceTree = "<group>"; };
-		43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ObjectiveResource.h"; path = "Classes/NSObject+ObjectiveResource.h"; sourceTree = "<group>"; };
 		43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ObjectiveResource.m"; path = "Classes/NSObject+ObjectiveResource.m"; sourceTree = "<group>"; };
-		43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORConfigurationManager.h; path = Classes/ORConfigurationManager.h; sourceTree = "<group>"; };
-		43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConfigurationManager.m; path = Classes/ORConfigurationManager.m; sourceTree = "<group>"; };
-		43E6E4AE0FF8E911004FD52D /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = Classes/Response.h; sourceTree = "<group>"; };
 		43E6E4AF0FF8E911004FD52D /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = Classes/Response.m; sourceTree = "<group>"; };
-		43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveResource.h; path = ObjectiveResource/ObjectiveResource.h; sourceTree = "<group>"; };
 		43E6E4C60FF8E973004FD52D /* ObjectiveSupport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSupport.xcodeproj; path = ../lib/objectivesupport/src/ObjectiveSupport.xcodeproj; sourceTree = SOURCE_ROOT; };
-		43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Error.m"; path = "Classes/NSError+Error.m"; sourceTree = "<group>"; };
-		43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+Error.h"; path = "Classes/NSError+Error.h"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ObjectiveResource_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveResource_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libObjectiveResource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjectiveResource.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,25 +136,25 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				43E6E4C00FF8E926004FD52D /* ObjectiveResource.h */,
-				43E6E4A00FF8E911004FD52D /* Connection.h */,
+				4348F0B2100365740023A303 /* ObjectiveResource.h */,
+				4348F0AA100365740023A303 /* Connection.h */,
 				43E6E4A10FF8E911004FD52D /* Connection.m */,
-				43E6E4A20FF8E911004FD52D /* ConnectionDelegate.h */,
+				4348F0AB100365740023A303 /* ConnectionDelegate.h */,
 				43E6E4A30FF8E911004FD52D /* ConnectionDelegate.m */,
-				43E6E4A40FF8E911004FD52D /* ConnectionManager.h */,
+				4348F0AC100365740023A303 /* ConnectionManager.h */,
 				43E6E4A50FF8E911004FD52D /* ConnectionManager.m */,
-				43E6E4A60FF8E911004FD52D /* NSHTTPURLResponse+Error.h */,
+				4348F0AE100365740023A303 /* NSHTTPURLResponse+Error.h */,
 				43E6E4A70FF8E911004FD52D /* NSHTTPURLResponse+Error.m */,
-				43E6E4A80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h */,
+				4348F0AF100365740023A303 /* NSMutableURLRequest+ResponseType.h */,
 				43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */,
-				43E6E4AA0FF8E911004FD52D /* NSObject+ObjectiveResource.h */,
+				4348F0B0100365740023A303 /* NSObject+ObjectiveResource.h */,
 				43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */,
-				43E6E4AE0FF8E911004FD52D /* Response.h */,
+				4348F0B3100365740023A303 /* Response.h */,
 				43E6E4AF0FF8E911004FD52D /* Response.m */,
-				43E6E4FE0FF8EA85004FD52D /* NSError+Error.m */,
-				43E6E4FF0FF8EA85004FD52D /* NSError+Error.h */,
-				43E6E4AC0FF8E911004FD52D /* ORConfigurationManager.h */,
-				43E6E4AD0FF8E911004FD52D /* ORConfigurationManager.m */,
+				4348F0AD100365740023A303 /* NSError+Error.h */,
+				4348F0BE100365890023A303 /* NSError+Error.m */,
+				4348F0B1100365740023A303 /* ORConfigurationManager.h */,
+				4348F0BF100365890023A303 /* ORConfigurationManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -207,16 +207,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* ObjectiveResource_Prefix.pch in Headers */,
-				43E6E4B00FF8E911004FD52D /* Connection.h in Headers */,
-				43E6E4B20FF8E911004FD52D /* ConnectionDelegate.h in Headers */,
-				43E6E4B40FF8E911004FD52D /* ConnectionManager.h in Headers */,
-				43E6E4B60FF8E911004FD52D /* NSHTTPURLResponse+Error.h in Headers */,
-				43E6E4B80FF8E911004FD52D /* NSMutableURLRequest+ResponseType.h in Headers */,
-				43E6E4BA0FF8E911004FD52D /* NSObject+ObjectiveResource.h in Headers */,
-				43E6E4BC0FF8E911004FD52D /* ORConfigurationManager.h in Headers */,
-				43E6E4BE0FF8E911004FD52D /* Response.h in Headers */,
-				43E6E4C10FF8E926004FD52D /* ObjectiveResource.h in Headers */,
-				43E6E5010FF8EA85004FD52D /* NSError+Error.h in Headers */,
+				4348F0B4100365740023A303 /* Connection.h in Headers */,
+				4348F0B5100365740023A303 /* ConnectionDelegate.h in Headers */,
+				4348F0B6100365740023A303 /* ConnectionManager.h in Headers */,
+				4348F0B7100365740023A303 /* NSError+Error.h in Headers */,
+				4348F0B8100365740023A303 /* NSHTTPURLResponse+Error.h in Headers */,
+				4348F0B9100365740023A303 /* NSMutableURLRequest+ResponseType.h in Headers */,
+				4348F0BA100365740023A303 /* NSObject+ObjectiveResource.h in Headers */,
+				4348F0BB100365740023A303 /* ORConfigurationManager.h in Headers */,
+				4348F0BC100365740023A303 /* ObjectiveResource.h in Headers */,
+				4348F0BD100365740023A303 /* Response.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +298,9 @@
 				43E6E4B70FF8E911004FD52D /* NSHTTPURLResponse+Error.m in Sources */,
 				43E6E4B90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m in Sources */,
 				43E6E4BB0FF8E911004FD52D /* NSObject+ObjectiveResource.m in Sources */,
-				43E6E4BD0FF8E911004FD52D /* ORConfigurationManager.m in Sources */,
 				43E6E4BF0FF8E911004FD52D /* Response.m in Sources */,
-				43E6E5000FF8EA85004FD52D /* NSError+Error.m in Sources */,
+				4348F0C0100365890023A303 /* NSError+Error.m in Sources */,
+				4348F0C1100365890023A303 /* ORConfigurationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,16 +16,16 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
 	
 	//Configure ObjectiveResource
-	[ObjectiveResourceConfig setSite:@"http://localhost:3000/"];
+	[[ORConfigurationManager defaultManager] setRemoteSite:@"http://localhost:3000/"];
 	
 	// dogs is password protected
-	[ObjectiveResourceConfig setUser:@"Hiro"];
-	[ObjectiveResourceConfig setPassword:@"Protagonist"];
+	[[ORConfigurationManager defaultManager] setRemoteUser:@"Hiro"];
+	[[ORConfigurationManager defaultManager] setRemotePassword:@"Protagonist"];
 	// use json
 	//[ObjectiveResourceConfig setResponseType:JSONResponse];
 	
 	// use xml
-	[ObjectiveResourceConfig setResponseType:XmlResponse];
+	[[ORConfigurationManager defaultManager]  setRemoteResponseType:XmlResponse];
 	[window addSubview:navigationController.view];
 	
 	// Override point for customization after app launch	
