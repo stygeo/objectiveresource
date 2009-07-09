@@ -1,14 +1,14 @@
 //
-//  ConnectionManager.m
+//  ORConnectionManager.m
 //
 //  Created by Adam Alexander on 2/28/09.
 //  Copyright 2009 yFactorial, LLC. All rights reserved.
 //
 
-#import "ConnectionManager.h"
+#import "ORConnectionManager.h"
 
 
-@implementation ConnectionManager
+@implementation ORConnectionManager
 @synthesize operationQueue;
 
 - (void)cancelAllJobs {
@@ -37,9 +37,9 @@
 
 #pragma mark Standard Singleton Plumbing
 
-static ConnectionManager *sharedConnectionManager = nil;
+static ORConnectionManager *sharedConnectionManager = nil;
 
-+ (ConnectionManager *)sharedInstance
++ (ORConnectionManager *)sharedInstance
 {
     @synchronized(self) {
         if (sharedConnectionManager == nil) {

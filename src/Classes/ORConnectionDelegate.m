@@ -1,15 +1,15 @@
 //
-//  ConnectionDelegate.m
+//  ORConnectionDelegate.m
 //  iphone-harvest
 //
 //  Created by vickeryj on 1/14/09.
 //  Copyright 2009 Joshua Vickery. All rights reserved.
 //
 
-#import "ConnectionDelegate.h"
+#import "ORConnectionDelegate.h"
 
 
-@implementation ConnectionDelegate
+@implementation ORConnectionDelegate
 
 @synthesize response, data, error, connection;
 

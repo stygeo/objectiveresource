@@ -1,5 +1,5 @@
 //
-//  Response.h
+//  ORResponse.h
 //  
 //
 //  Created by Ryan Daigle on 7/30/08.
@@ -14,7 +14,7 @@
 #endif
 #endif
 
-@interface Response : NSObject {
+@interface ORResponse : NSObject {
 	NSData *body;
 	NSDictionary *headers;
 	NSInteger statusCode;

@@ -7,8 +7,8 @@
 //
 
 #import "NSObject+ObjectiveResource.h"
-#import "Connection.h"
-#import "Response.h"
+#import "ORConnection.h"
+#import "ORResponse.h"
 #import "CoreSupport.h"
 #import "XMLSerializableSupport.h"
 #import "JSONSerializableSupport.h"
@@ -18,7 +18,7 @@
 
 // Find all items 
 + (NSArray *)findAllRemoteWithResponse:(NSError **)aError {
-	Response *res = [Connection get:[self getRemoteCollectionPath]];
+	ORResponse *res = [ORConnection get:[self getRemoteCollectionPath]];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
@@ -32,7 +32,7 @@
 }
 
 + (id)findRemote:(NSString *)elementId withResponse:(NSError **)aError {
-	Response *res = [Connection get:[self getRemoteElementPath:elementId]];
+	ORResponse *res = [ORConnection get:[self getRemoteElementPath:elementId]];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
@@ -135,7 +135,7 @@
 }
 
 - (BOOL)createRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {
-	Response *res = [Connection post:[self convertToRemoteExpectedType] 
+	ORResponse *res = [ORConnection post:[self convertToRemoteExpectedType] 
 								  to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
@@ -153,7 +153,7 @@
 }
 
 -(BOOL)updateRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {	
-	Response *res = [Connection put:[self convertToRemoteExpectedType] to:path];
+	ORResponse *res = [ORConnection put:[self convertToRemoteExpectedType] to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
@@ -170,7 +170,7 @@
 }
 
 - (BOOL)destroyRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {
-	Response *res = [Connection delete:path];
+	ORResponse *res = [ORConnection delete:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}

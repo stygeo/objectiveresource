@@ -8,7 +8,7 @@
 
 #import "NSMutableURLRequest+ResponseType.h"
 #import "ObjectiveResource.h"
-#import "Connection.h"
+#import "ORConnection.h"
 
 @implementation NSMutableURLRequest(ResponseType)
 
@@ -16,7 +16,7 @@
 	NSMutableURLRequest * request;
 	request = [NSMutableURLRequest requestWithURL:url 
 									  cachePolicy:NSURLRequestReloadIgnoringCacheData
-								  timeoutInterval:[Connection timeout]];
+								  timeoutInterval:[ORConnection timeout]];
 	[request setHTTPMethod:method];
 	return request;
 }

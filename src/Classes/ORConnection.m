@@ -6,11 +6,11 @@
 //  Copyright 2008 yFactorial, LLC. All rights reserved.
 //
 
-#import "Connection.h"
-#import "Response.h"
+#import "ORConnection.h"
+#import "ORResponse.h"
 #import "NSData+Additions.h"
 #import "NSMutableURLRequest+ResponseType.h"
-#import "ConnectionDelegate.h"
+#import "ORConnectionDelegate.h"
 #import "ORConfigurationManager.h"
 #import "OAuthConsumer/OAuthConsumer.h"
 
@@ -20,7 +20,7 @@
 	#define debugLog(...)
 #endif
 
-@implementation Connection
+@implementation ORConnection
 
 static float timeoutInterval = 5.0;
 
@@ -48,7 +48,7 @@ static NSMutableArray *activeDelegates;
 	}
 }
 
-+ (Response *)sendRequest:(NSMutableURLRequest *)request {
++ (ORResponse *)sendRequest:(NSMutableURLRequest *)request {
 	
 	//lots of servers fail to implement http basic authentication correctly, so we pass the credentials even if they are not asked for
 	//TODO make this configurable?
@@ -58,7 +58,7 @@ static NSMutableArray *activeDelegates;
 	
 	[self logRequest:request to:[url absoluteString]];
 	
-	ConnectionDelegate *connectionDelegate = [[[ConnectionDelegate alloc] init] autorelease];
+	ORConnectionDelegate *connectionDelegate = [[[ORConnectionDelegate alloc] init] autorelease];
 
 	[[self activeDelegates] addObject:connectionDelegate];
 	NSURLConnection *connection = [[[NSURLConnection alloc] initWithRequest:request delegate:connectionDelegate startImmediately:NO] autorelease];
@@ -73,9 +73,9 @@ static NSMutableArray *activeDelegates;
 	while (![connectionDelegate isDone]) {
 		[[NSRunLoop currentRunLoop] runMode:runLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:.3]];
 	}
-	Response *resp = [Response responseFrom:(NSHTTPURLResponse *)connectionDelegate.response 
-								   withBody:connectionDelegate.data 
-								   andError:connectionDelegate.error];
+	ORResponse *resp = [ORResponse responseFrom:(NSHTTPURLResponse *)connectionDelegate.response 
+									   withBody:connectionDelegate.data 
+									   andError:connectionDelegate.error];
 	[resp log];
 	
 	[[UIApplication sharedApplication]	setNetworkActivityIndicatorVisible:NO];
@@ -92,7 +92,7 @@ static NSMutableArray *activeDelegates;
 	return resp;
 }
 
-+ (Response *)sendBy:(NSString *)method withBody:(NSString *)body to:(NSString *)path {
++ (ORResponse *)sendBy:(NSString *)method withBody:(NSString *)body to:(NSString *)path {
 	NSMutableURLRequest * request;
 	NSURL * url;
 	ORConfigurationManager * defaultManager;
@@ -169,24 +169,24 @@ static NSMutableArray *activeDelegates;
 	return [self sendRequest:request];
 }
 
-+ (Response *)post:(NSString *)body to:(NSString *)url {
++ (ORResponse *)post:(NSString *)body to:(NSString *)url {
 	return [self sendBy:@"POST" withBody:body to:url];
 }
 
-+ (Response *)put:(NSString *)body to:(NSString *)url {
++ (ORResponse *)put:(NSString *)body to:(NSString *)url {
 	return [self sendBy:@"PUT" withBody:body to:url];
 }
 
-+ (Response *)get:(NSString *)url {
++ (ORResponse *)get:(NSString *)url {
 	return [self sendBy:@"GET" withBody:nil to:url];
 }
 
-+ (Response *)delete:(NSString *)url {
++ (ORResponse *)delete:(NSString *)url {
 	return [self sendBy:@"DELETE" withBody:nil to:url];
 }
 
 + (void) cancelAllActiveConnections {
-	for (ConnectionDelegate *delegate in activeDelegates) {
+	for (ORConnectionDelegate *delegate in activeDelegates) {
 		[delegate performSelectorOnMainThread:@selector(cancel) withObject:nil waitUntilDone:NO];
 	}
 }

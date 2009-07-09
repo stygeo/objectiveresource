@@ -1,15 +1,15 @@
 //
-//  Response.m
+//  ORResponse.m
 //  
 //
 //  Created by Ryan Daigle on 7/30/08.
 //  Copyright 2008 yFactorial, LLC. All rights reserved.
 //
 
-#import "Response.h"
+#import "ORResponse.h"
 #import "NSHTTPURLResponse+Error.h"
 
-@implementation Response
+@implementation ORResponse
 
 @synthesize body, headers, statusCode, error;
 

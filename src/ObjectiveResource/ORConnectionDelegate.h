@@ -1,5 +1,5 @@
 //
-//  ConnectionDelegate.h
+//  ORConnectionDelegate.h
 //  iphone-harvest
 //
 //  Created by vickeryj on 1/14/09.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ConnectionDelegate : NSObject {
+@interface ORConnectionDelegate : NSObject {
 
 	NSMutableData *data;
 	NSURLResponse *response;
