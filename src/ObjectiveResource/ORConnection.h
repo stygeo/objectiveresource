@@ -14,9 +14,10 @@
 + (void) setTimeout:(float)timeout;
 + (float) timeout;
 
-+ (ORResponse *)post:(NSString *)body to:(NSString *)url;
-+ (ORResponse *)put:(NSString *)body to:(NSString *)url;
++ (ORResponse *)post:(NSData *)body to:(NSString *)url;
++ (ORResponse *)put:(NSData *)body to:(NSString *)url;
 + (ORResponse *)get:(NSString *)url;
++ (ORResponse *)get:(NSString *)url withParameters:(NSDictionary *)dictionary;
 + (ORResponse *)delete:(NSString *)url;
 
 + (void) cancelAllActiveConnections;

@@ -20,6 +20,8 @@
 		4348F0C0100365890023A303 /* NSError+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 4348F0BE100365890023A303 /* NSError+Error.m */; };
 		4348F0C1100365890023A303 /* ORConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4348F0BF100365890023A303 /* ORConfigurationManager.m */; };
 		43C256580FFA127A00EFB62D /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C256530FFA123700EFB62D /* libOAuthConsumer.a */; };
+		43DC925C100F5F5E00941748 /* ORMutableURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DC925A100F5F5E00941748 /* ORMutableURLRequest.h */; };
+		43DC925D100F5F5E00941748 /* ORMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC925B100F5F5E00941748 /* ORMutableURLRequest.m */; };
 		43E6E4B10FF8E911004FD52D /* ORConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A10FF8E911004FD52D /* ORConnection.m */; };
 		43E6E4B30FF8E911004FD52D /* ORConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A30FF8E911004FD52D /* ORConnectionDelegate.m */; };
 		43E6E4B50FF8E911004FD52D /* ORConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6E4A50FF8E911004FD52D /* ORConnectionManager.m */; };
@@ -77,6 +79,8 @@
 		4348F0BE100365890023A303 /* NSError+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+Error.m"; path = "Classes/NSError+Error.m"; sourceTree = "<group>"; };
 		4348F0BF100365890023A303 /* ORConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConfigurationManager.m; path = Classes/ORConfigurationManager.m; sourceTree = "<group>"; };
 		43C2564E0FFA123700EFB62D /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../lib/oauth-objc/src/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		43DC925A100F5F5E00941748 /* ORMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORMutableURLRequest.h; sourceTree = "<group>"; };
+		43DC925B100F5F5E00941748 /* ORMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORMutableURLRequest.m; sourceTree = "<group>"; };
 		43E6E4A10FF8E911004FD52D /* ORConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConnection.m; path = Classes/ORConnection.m; sourceTree = "<group>"; };
 		43E6E4A30FF8E911004FD52D /* ORConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConnectionDelegate.m; path = Classes/ORConnectionDelegate.m; sourceTree = "<group>"; };
 		43E6E4A50FF8E911004FD52D /* ORConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORConnectionManager.m; path = Classes/ORConnectionManager.m; sourceTree = "<group>"; };
@@ -136,9 +140,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4306DA551005E0B9009CA662 /* ORConnection.h */,
-				4306DA561005E0B9009CA662 /* ORResponse.h */,
 				4348F0B2100365740023A303 /* ObjectiveResource.h */,
+				4306DA551005E0B9009CA662 /* ORConnection.h */,
 				43E6E4A10FF8E911004FD52D /* ORConnection.m */,
 				4348F0AB100365740023A303 /* ORConnectionDelegate.h */,
 				43E6E4A30FF8E911004FD52D /* ORConnectionDelegate.m */,
@@ -150,11 +153,14 @@
 				43E6E4A90FF8E911004FD52D /* NSMutableURLRequest+ResponseType.m */,
 				4348F0B0100365740023A303 /* NSObject+ObjectiveResource.h */,
 				43E6E4AB0FF8E911004FD52D /* NSObject+ObjectiveResource.m */,
+				4306DA561005E0B9009CA662 /* ORResponse.h */,
 				43E6E4AF0FF8E911004FD52D /* ORResponse.m */,
 				4348F0AD100365740023A303 /* NSError+Error.h */,
 				4348F0BE100365890023A303 /* NSError+Error.m */,
 				4348F0B1100365740023A303 /* ORConfigurationManager.h */,
 				4348F0BF100365890023A303 /* ORConfigurationManager.m */,
+				43DC925A100F5F5E00941748 /* ORMutableURLRequest.h */,
+				43DC925B100F5F5E00941748 /* ORMutableURLRequest.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				4348F0BC100365740023A303 /* ObjectiveResource.h in Headers */,
 				4306DA571005E0B9009CA662 /* ORConnection.h in Headers */,
 				4306DA581005E0B9009CA662 /* ORResponse.h in Headers */,
+				43DC925C100F5F5E00941748 /* ORMutableURLRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +308,7 @@
 				43E6E4BF0FF8E911004FD52D /* ORResponse.m in Sources */,
 				4348F0C0100365890023A303 /* NSError+Error.m in Sources */,
 				4348F0C1100365890023A303 /* ORConfigurationManager.m in Sources */,
+				43DC925D100F5F5E00941748 /* ORMutableURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

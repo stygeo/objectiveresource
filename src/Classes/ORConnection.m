@@ -13,6 +13,7 @@
 #import "ORConnectionDelegate.h"
 #import "ORConfigurationManager.h"
 #import "OAuthConsumer/OAuthConsumer.h"
+#import "NSMutableURLRequest+Parameters.h"
 
 
 //#define debugLog(...) NSLog(__VA_ARGS__)
@@ -92,7 +93,7 @@ static NSMutableArray *activeDelegates;
 	return resp;
 }
 
-+ (ORResponse *)sendBy:(NSString *)method withBody:(NSString *)body to:(NSString *)path {
++ (ORResponse *)sendBy:(NSString *)method withBody:(NSData *)body to:(NSString *)path withParameters:(NSDictionary *)parameters {
 	NSMutableURLRequest * request;
 	NSURL * url;
 	ORConfigurationManager * defaultManager;
@@ -124,65 +125,54 @@ static NSMutableArray *activeDelegates;
 		[escapedPassword release];
 		
 	} else if ([defaultManager authenticationMethod] == ORAuthenticationMethodOAuth) {
-		OARequestParameter * nameParam;
-		NSArray * query = [[url query] componentsSeparatedByString:@"&"];
-		NSMutableArray * parameters = [[[NSMutableArray alloc] init] autorelease];
-		NSURL * cleanURL = [[NSURL alloc] initWithScheme:[url scheme] 
-											   host:[url host] 
-											   path:[url path]];
-		
-		for (id parameter in query) {
-			NSArray * components = [parameter componentsSeparatedByString:@"="];
-			nameParam = [[OARequestParameter alloc] initWithName:[components objectAtIndex:0]
-														   value:[components objectAtIndex:1]];
-			[parameters addObject:nameParam];
-			[nameParam release];
-		}
-		
-		request = [[OAMutableURLRequest alloc] initWithURL:cleanURL
+		request = [[OAMutableURLRequest alloc] initWithURL:[NSURL URLWithString:path]
 												  consumer:[defaultManager consumer]
 													 token:[defaultManager token]
 													 realm:nil
 										 signatureProvider:[defaultManager signatureProvider]];
 		[request setHTTPMethod:method];
-		[request setParameters:parameters];
+		if (parameters != nil) {
+			NSMutableArray * oaParameters = [NSMutableArray array];
+			OARequestParameter * parameter;
+			for (id key in [parameters allKeys]) {
+				parameter = [OARequestParameter requestParameterWithName:key 
+																   value:[parameters valueForKey:key]];
+				[oaParameters addObject:parameter]; 
+			}
+			[request setParameters:oaParameters];
+		}
 		[(OAMutableURLRequest *)request prepare];
 		[request autorelease];
-		[cleanURL release];
 	} else if ([defaultManager authenticationMethod] == ORAuthenticationMethodNone) {
 		request = [NSMutableURLRequest requestWithUrl:[NSURL URLWithString:path] 
 											andMethod:method];
 	}
-	if (body != nil) {
-		[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
-		switch ([[ORConfigurationManager defaultManager] remoteResponseType]) {
-			case JSONResponse:
-				[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];	
-				[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-				break;
-			default:
-				[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];	
-				[request addValue:@"application/xml" forHTTPHeaderField:@"Accept"];
-				break;
-		}
+	if ([method isEqualToString:@"POST"] || [method isEqualToString:@"PUT"]) {
+		[request setHTTPBody:body];
+		[request setValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+        [request setValue:[NSString stringWithFormat:@"application/%@", @"xml"] forHTTPHeaderField:@"Content-Type"];
 	}
 	return [self sendRequest:request];
 }
 
-+ (ORResponse *)post:(NSString *)body to:(NSString *)url {
-	return [self sendBy:@"POST" withBody:body to:url];
++ (ORResponse *)post:(NSData *)body to:(NSString *)url {
+	return [self sendBy:@"POST" withBody:body to:url withParameters:nil];
 }
 
-+ (ORResponse *)put:(NSString *)body to:(NSString *)url {
-	return [self sendBy:@"PUT" withBody:body to:url];
++ (ORResponse *)put:(NSData *)body to:(NSString *)url {
+	return [self sendBy:@"PUT" withBody:body to:url withParameters:nil];
 }
 
 + (ORResponse *)get:(NSString *)url {
-	return [self sendBy:@"GET" withBody:nil to:url];
+	return [self sendBy:@"GET" withBody:nil to:url withParameters:nil];
+}
+
++ (ORResponse *)get:(NSString *)url withParameters:(NSDictionary *)parameters {
+	return [self sendBy:@"GET" withBody:nil to:url withParameters:parameters];
 }
 
 + (ORResponse *)delete:(NSString *)url {
-	return [self sendBy:@"DELETE" withBody:nil to:url];
+	return [self sendBy:@"DELETE" withBody:nil to:url withParameters:nil];
 }
 
 + (void) cancelAllActiveConnections {

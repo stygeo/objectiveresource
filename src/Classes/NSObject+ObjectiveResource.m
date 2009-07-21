@@ -135,8 +135,8 @@
 }
 
 - (BOOL)createRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {
-	ORResponse *res = [ORConnection post:[self convertToRemoteExpectedType] 
-								  to:path];
+	ORResponse *res = [ORConnection post:[[self convertToRemoteExpectedType] dataUsingEncoding:NSUTF8StringEncoding] 
+									  to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
@@ -153,7 +153,8 @@
 }
 
 -(BOOL)updateRemoteAtPath:(NSString *)path withResponse:(NSError **)aError {	
-	ORResponse *res = [ORConnection put:[self convertToRemoteExpectedType] to:path];
+	ORResponse *res = [ORConnection put:[[self convertToRemoteExpectedType] dataUsingEncoding:NSUTF8StringEncoding] 
+									 to:path];
 	if([res isError] && aError) {
 		*aError = res.error;
 	}
