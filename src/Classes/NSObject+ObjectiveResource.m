@@ -256,8 +256,19 @@
 
 - (NSArray *)excludedPropertyNames
 {
-  // exclude id , created_at , updated_at
-  return [NSArray arrayWithObjects:[self getRemoteClassIdName],@"createdAt",@"updatedAt",nil]; 
+	// exclude id , created_at , updated_at
+	return [NSArray arrayWithObjects:[self getRemoteClassIdName],@"createdAt",
+			@"updatedAt",
+			@"URLValue",
+			@"panoramaID",
+			@"accessibilityLanguage",
+			@"accessibilityFrame",
+			@"accessibilityTraits",
+			@"accessibilityHint",
+			@"accessibilityValue",
+			@"accessibilityLabel",
+			@"isAccessibilityElement",
+			nil]; 
 }
 
 
