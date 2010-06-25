@@ -1,0 +1,6 @@
+[submodule "lib/oauth-objc"]
+	path = lib/oauth-objc
+	url = git://github.com/stygeo/oauth-objc.git
+[submodule "lib/objectivesupport"]
+	path = lib/objectivesupport
+	url = git://github.com/stygeo/objectivesupport.git
